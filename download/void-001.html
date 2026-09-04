@@ -95,7 +95,6 @@
     }
 
     .download {
-      display: none;
       margin-top: 40px;
     }
 
@@ -127,14 +126,6 @@
       line-height: 1.6;
     }
 
-    .success {
-      display: none;
-      margin-top: 35px;
-      color: #aaa;
-      font-size: 12px;
-      letter-spacing: 1px;
-    }
-
     @keyframes scan {
       from {
         transform: translateX(-120%);
@@ -163,10 +154,6 @@
 
     <div class="signal"></div>
 
-    <div class="success" id="success">
-      PAYMENT VERIFIED // ACCESS GRANTED
-    </div>
-
     <div class="download" id="download">
       <a id="downloadLink" href="#">
         DOWNLOAD VOID 001
@@ -189,52 +176,30 @@
     const sessionId = params.get("session_id");
 
     const message = document.getElementById("message");
-    const success = document.getElementById("success");
     const download = document.getElementById("download");
     const downloadLink = document.getElementById("downloadLink");
     const error = document.getElementById("error");
 
-    async function verifyPayment() {
+    if (!sessionId) {
 
-      if (!sessionId) {
-        message.textContent = "NO PAYMENT SESSION DETECTED.";
-        error.style.display = "block";
-        return;
-      }
+      message.textContent =
+        "NO PAYMENT SESSION DETECTED.";
 
-      try {
+      download.style.display = "none";
+      error.style.display = "block";
 
-        const downloadUrl =
-          WORKER_URL +
-          "/download?session_id=" +
-          encodeURIComponent(sessionId);
+    } else {
 
-        const response = await fetch(downloadUrl);
+      message.textContent =
+        "PAYMENT VERIFIED // DOWNLOAD READY";
 
-        if (!response.ok) {
-          throw new Error("Payment verification failed.");
-        }
+      downloadLink.href =
+        WORKER_URL +
+        "/download?session_id=" +
+        encodeURIComponent(sessionId);
 
-        message.textContent =
-          "PAYMENT VERIFIED. YOUR PRODUCT IS READY.";
-
-        success.style.display = "block";
-        download.style.display = "block";
-
-        downloadLink.href = downloadUrl;
-
-      } catch (err) {
-
-        console.error(err);
-
-        message.textContent =
-          "UNABLE TO VERIFY PAYMENT.";
-
-        error.style.display = "block";
-      }
+      download.style.display = "block";
     }
-
-    verifyPayment();
   </script>
 
 </body>
