@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#050505;color:#ededed;font-family:"IBM Plex Mono",monospace;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.055;background:repeating-linear-gradient(0deg,transparent 0 4px,#fff 5px)}
+.texture{position:fixed;inset:0;pointer-events:none;z-index:49;opacity:.06;background-image:radial-gradient(circle,#fff .65px,transparent .7px);background-size:5px 5px}
+
+.header{height:73px;border-bottom:1px solid #303030;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:0 5%;background:#050505;position:sticky;top:0;z-index:40}
+.logo{font-family:"Space Grotesk",sans-serif;font-size:27px;letter-spacing:.31em;font-weight:500}
+.header nav{display:flex;gap:38px}
+.header nav a{font-size:12px;letter-spacing:.22em;color:#ddd}
+.header nav a:hover{color:#777}
+.header-icons{justify-self:end;display:flex;align-items:center;gap:17px;color:#ddd}
+.header-icons .cart{font-size:25px;transform:rotate(180deg);display:block}
+.header-icons i{height:28px;width:1px;background:#555}
+.header-icons b{font-size:20px;font-weight:400}
+
+main{width:90%;max-width:1380px;margin:auto}
+.hero{height:285px;border-bottom:1px solid #555;display:grid;grid-template-columns:1fr 1.08fr;position:relative;overflow:hidden}
+.hero-copy{padding:75px 8px 0;position:relative;z-index:5}
+.hero-copy p{font-size:14px;line-height:1.8;letter-spacing:.055em;margin:0;color:#ddd}
+.hero-tag{display:flex;align-items:center;gap:14px;margin-top:29px;font-size:10px;letter-spacing:.16em;color:#9a9a9a}
+.hero-tag span{display:block;width:27px;height:1px;background:#aaa}
+.hero-image{position:relative;overflow:hidden;background:linear-gradient(110deg,#080808,#171717 50%,#070707)}
+.hero-image:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 32px,rgba(255,255,255,.025) 33px,transparent 34px),linear-gradient(180deg,rgba(255,255,255,.03),transparent 48%,#050505)}
+.orb{position:absolute;width:295px;height:295px;border-radius:50%;right:12%;top:-84px;background:radial-gradient(circle at 36% 33%,#555,#242424 41%,#080808 72%);box-shadow:0 0 60px #000}
+.structures{position:absolute;bottom:0;left:0;right:0;height:53%;display:flex;align-items:flex-end;gap:3px;padding:0 3%;background:linear-gradient(180deg,transparent,#050505 28%)}
+.structures span{display:block;width:8%;border-top:1px solid #555;background:linear-gradient(180deg,#333,#090909);opacity:.75}
+.structures span:nth-child(1){height:52%}.structures span:nth-child(2){height:76%}.structures span:nth-child(3){height:63%}.structures span:nth-child(4){height:92%}.structures span:nth-child(5){height:58%}.structures span:nth-child(6){height:72%}.structures span:nth-child(7){height:47%}.structures span:nth-child(8){height:84%}.structures span:nth-child(9){height:62%}.structures span:nth-child(10){height:76%}
+.hero-side{position:absolute;z-index:4;right:15px;top:83px;font-size:8px;line-height:2.05;letter-spacing:.25em;color:#aaa}
+.hero-side div{width:25px;height:1px;background:#aaa;margin-top:9px}
+
+.catalog{padding-top:28px}
+.section-title{display:flex;align-items:center;gap:17px;font-size:17px;letter-spacing:.3em;margin-bottom:17px}
+.section-title span{width:23px;height:1px;background:#aaa}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{border:1px solid #424242;padding:15px;background:#080808;min-width:0}
+.cover{aspect-ratio:1/1;position:relative;overflow:hidden;border:1px solid #222;display:flex;align-items:center;justify-content:center;text-align:center}
+.cover:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0 8px,rgba(255,255,255,.035) 9px),repeating-linear-gradient(90deg,transparent 0 23px,rgba(255,255,255,.025) 24px)}
+.cover:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 45%,transparent 0 18%,rgba(0,0,0,.58) 75%)}
+.void{background:radial-gradient(circle at 50% 30%,#666,transparent 16%),linear-gradient(140deg,#090909 20%,#383838 21% 26%,#111 27% 55%,#333 56% 60%,#080808 61%)}
+.static{background:linear-gradient(90deg,#090909,#383838 47%,#0b0b0b)}
+.null{background:linear-gradient(135deg,#090909 20%,#414141 21% 26%,#101010 27% 57%,#303030 58% 61%,#080808)}
+.after{background:radial-gradient(circle at 58% 28%,#555,transparent 22%),linear-gradient(145deg,#0a0a0a,#393939 47%,#090909 48%)}
+.cover-name{position:relative;z-index:3;font-family:"Space Grotesk",sans-serif;font-size:23px;letter-spacing:.24em}
+.cover-type{position:absolute;z-index:3;top:58%;left:0;right:0;font-size:8px;letter-spacing:.34em;color:#aaa}
+.cover-brand{position:absolute;z-index:3;bottom:12px;left:0;right:0;font-size:8px;letter-spacing:.4em;color:#888}
+.card h3{font-size:16px;font-weight:400;letter-spacing:.18em;margin:16px 0 7px}
+.card>small{font-size:9px;letter-spacing:.25em;color:#999}
+.action{height:50px;border:1px solid #777;margin-top:12px;display:flex;align-items:center;justify-content:center;letter-spacing:.19em;font-size:11px}
+.buy{justify-content:stretch}.buy span,.buy b{width:50%;text-align:center;font-weight:400}.buy i{width:1px;height:24px;background:#777}.buy:hover{background:#eee;color:#000}.buy:hover i{background:#000}
+.soon{color:#aaa}
+.void-card{position:relative}
+.hover-panel{position:absolute;z-index:7;left:18px;right:18px;top:29%;padding:14px;background:rgba(4,4,4,.94);border:1px solid #444;opacity:0;transform:translateY(8px);transition:opacity .22s ease,transform .22s ease}
+.void-card:hover .hover-panel{opacity:1;transform:none}
+.hover-panel p{font-size:11px;line-height:1.6;margin:0 0 12px;text-align:left}
+.audio-row{display:grid;grid-template-columns:24px 61px 1fr 22px;align-items:center;gap:7px}
+.audio-row button{border:0;background:none;color:#fff;padding:0;cursor:pointer}
+.audio-row button:first-child{font-size:15px}.audio-row button:last-child{font-size:14px}
+.audio-row span{font-size:8px;color:#aaa}
+.audio-row input{width:100%;accent-color:#ddd}
+.bank-card{padding:14px}
+.bank-cover{aspect-ratio:1.35/1;border:1px solid #222;position:relative;overflow:hidden}
+.bank-cover:before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 18px,rgba(255,255,255,.03) 19px),repeating-linear-gradient(0deg,transparent 0 10px,rgba(255,255,255,.025) 11px)}
+.bank-cover b{position:absolute;left:18px;top:22px;font-size:16px;font-weight:400;letter-spacing:.24em}.bank-cover small{position:absolute;left:18px;top:49px;font-size:8px;letter-spacing:.24em;color:#888}
+.dystopia{background:linear-gradient(135deg,#262626,#080808 58%,#353535)}.fracture{background:linear-gradient(55deg,#090909 34%,#484848 35% 41%,#111 42% 65%,#3b3b3b 66%,#080808)}.oblivion{background:radial-gradient(circle at 28% 64%,#444,transparent 22%),linear-gradient(110deg,#080808,#292929,#070707)}.signal{background:repeating-linear-gradient(90deg,#080808 0 13px,#2d2d2d 14px 17px,#090909 18px 30px)}
+.bank-card .action{margin-top:13px}
+.simple-section{border-top:1px solid #292929;margin-top:58px;padding-top:28px;padding-bottom:42px}
+.simple-section p{font-size:12px;line-height:1.9;color:#888;max-width:750px}
+.contact a{display:inline-block;margin-top:10px;border-bottom:1px solid #555;padding-bottom:6px;font-size:10px;letter-spacing:.17em}
+footer{border-top:1px solid #292929;margin-top:15px;padding:24px 5%;display:flex;justify-content:space-between;color:#555;font-size:9px;letter-spacing:.2em}
+
+@media(max-width:900px){
+  .header{grid-template-columns:1fr auto}.header nav{display:none}
+  .hero{height:auto;min-height:500px;grid-template-columns:1fr}.hero-image{position:absolute;inset:0;opacity:.58}.hero-copy{padding:75px 5% 80px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+  .header{padding:0 14px}.logo{font-size:21px}
+  main{width:calc(100% - 28px)}.hero{min-height:440px}.hero-copy{padding:55px 10px}.hero-copy p{font-size:12px}.hero-tag{font-size:8px;line-height:1.7}.orb{width:210px;height:210px;right:2%;top:90px}
+  .grid{grid-template-columns:1fr}.card{padding:11px}.bank-card{padding:11px}.section-title{font-size:15px}
+  footer{padding:22px 14px;flex-direction:column;gap:10px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
