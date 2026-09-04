@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="XAVEVR — digital archive built for producers who prefer imperfect signals, heavy drums and textures that don't belong.">
+<title>XAVEVR // DIGITAL ARCHIVE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+<header class="site-header">
+  <a class="logo" href="#top">X A V E V R</a>
+  <nav><a href="#kits">KITS</a><a href="#banks">BANKS</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></nav>
+  <div class="icons"><span class="cart">⌑</span><span class="divider"></span><span class="dash">—</span></div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-copy">
+    <p>digital archive built for producers who prefer<br>imperfect signals, heavy drums and textures that<br>don't belong.</p>
+    <div class="hero-sub"><span>—</span> SOUNDS FOR A DIFFERENT TOMORROW.</div>
+  </div>
+  <div class="hero-art">
+    <div class="moon"></div>
+    <div class="city"></div>
+    <div class="hero-vertical">SOUNDS<br>FOR<br>DIFFERENT<br>TOMORROW<div></div></div>
+  </div>
+</section>
+
+<section class="catalog" id="kits">
+  <div class="section-title"><span></span>DRUM KITS</div>
+  <div class="grid">
+    <article class="card void-card">
+      <div class="art void-art">
+        <div class="void-overlay">
+          <p>Hard drums, clipped textures,<br>mean basses, over 600 drum samples.</p>
+          <div class="player">
+            <button class="play" type="button" aria-label="Play VOID 001 preview">▶</button>
+            <span class="time" id="time">0:00 / 0:30</span>
+            <input id="seek" type="range" min="0" max="30" value="0" aria-label="Preview position">
+            <button class="volume" type="button" aria-label="Mute preview">◖</button>
+          </div>
+        </div>
+        <div class="art-label">VOID 001</div><div class="art-type">DRUM KIT</div><div class="mark">XAVEVR</div>
+      </div>
+      <div class="card-info"><h3>VOID 001</h3><span>DRUM KIT</span></div>
+      <a class="buy" href="https://buy.stripe.com/dRm7sLbTkerZ1RLd6C43S00"><span>$1.00</span><i></i><b>BUY NOW</b></a>
+      <audio id="voidAudio" preload="metadata" src="audio/void-001-preview.wav"></audio>
+    </article>
+
+    <article class="card coming"><div class="art static-art"><div class="art-label">STATIC 002</div><div class="art-type">DRUM KIT</div><div class="mark">XAVEVR</div></div><div class="card-info"><h3>STATIC 002</h3><span>DRUM KIT</span></div><div class="coming-btn">COMING SOON</div></article>
+    <article class="card coming"><div class="art null-art"><div class="art-label">NULL 001</div><div class="art-type">DRUM KIT</div><div class="mark">XAVEVR</div></div><div class="card-info"><h3>NULL 001</h3><span>DRUM KIT</span></div><div class="coming-btn">COMING SOON</div></article>
+    <article class="card coming"><div class="art after-art"><div class="art-label">AFTER 002</div><div class="art-type">DRUM KIT</div><div class="mark">XAVEVR</div></div><div class="card-info"><h3>AFTER 002</h3><span>DRUM KIT</span></div><div class="coming-btn">COMING SOON</div></article>
+  </div>
+</section>
+
+<section class="catalog" id="banks">
+  <div class="section-title"><span></span>SERUM BANKS</div>
+  <div class="grid">
+    <article class="card coming"><div class="art bank dystopia"><div class="bank-label">DYSTOPIA</div><div class="art-type">SERUM BANK</div></div><div class="coming-btn">COMING SOON</div></article>
+    <article class="card coming"><div class="art bank fracture"><div class="bank-label">FRACTURE</div><div class="art-type">SERUM BANK</div></div><div class="coming-btn">COMING SOON</div></article>
+    <article class="card coming"><div class="art bank oblivion"><div class="bank-label">OBLIVION</div><div class="art-type">SERUM BANK</div></div><div class="coming-btn">COMING SOON</div></article>
+    <article class="card coming"><div class="art bank signal"><div class="bank-label">SIGNAL</div><div class="art-type">SERUM BANK</div></div><div class="coming-btn">COMING SOON</div></article>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="section-title"><span></span>ABOUT</div>
+  <p>XAVEVR is a small independent archive of hard drums, distorted textures, mean basses and synthetic noise. Built for producers who want clean tools with a damaged edge.</p>
+</section>
+
+<section class="contact" id="contact">
+  <div class="section-title"><span></span>CONTACT</div>
+  <p>FOR SIGNALS, RELEASES OR OTHER TRANSMISSIONS.</p>
+  <a href="https://www.instagram.com/xavevr" target="_blank" rel="noopener">INSTAGRAM // @XAVEVR</a>
+</section>
+</main>
+<footer><span>© XAVEVR 2026</span><span>END OF TRANSMISSION</span></footer>
+<script src="script.js"></script>
+</body></html>
